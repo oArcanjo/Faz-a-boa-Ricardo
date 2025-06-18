@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geração Distribuída - Acesso Rápido</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="min-h-screen flex flex-col">
+        <header class="header">
+            <div class="header-left">
+                <a href="index.html" class="home-btn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9,22 9,12 15,12 15,22"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="header-right">
+                <div class="title-container">
+                    <svg class="laptop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16" />
+                    </svg>
+                    <span class="title">Acesso Rápido - Ilhas de Atendimento.</span>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="container">
+                <div class="page-header">
+                    <div class="page-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+                        </svg>
+                    </div>
+                    <h1 class="page-title">Geração Distribuída</h1>
+                </div>
+
+                <div class="tabs">
+                    <div class="tabs-list">
+                        <button class="tab-trigger active" data-tab="acesso-rapido">Acesso Rápido</button>
+                        <button class="tab-trigger" data-tab="utilitarios">Utilitários</button>
+                        <button class="tab-trigger" data-tab="gd-go">G. Distribuída GO</button>
+                    </div>
+
+                    <div id="acesso-rapido" class="tab-content active">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h2 class="card-header-title">
+                                    <span class="card-header-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                            <polyline points="15,3 21,3 21,9"/>
+                                            <line x1="10" y1="14" x2="21" y2="3"/>
+                                        </svg>
+                                    </span>
+                                    Acesso Rápido
+                                </h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="links-grid">
+                                    <div>
+                                        <a href="https://apps.sae1.pure.cloud/" target="_blank" class="link-btn">
+                                            <span>Genesys</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="http://unifica.equatorialenergia.com.br:9203/sap(bD1wdCZjPTQwMiZkPW1pbg==)/bc/bsp/sap/crm_ui_start/default.htm?sap-client=402&sap-language=PT" target="_blank" class="link-btn">
+                                            <span>SAP PA</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="http://unifica.equatorialenergia.com.br:9204/sap(bD1wdCZjPTQwMSZkPW1pbg==)/bc/bsp/sap/crm_ui_start/default.htm?sap-client=401&sap-language=PT" target="_blank" class="link-btn">
+                                            <span>SAP MA</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="http://epispdccrm02.equatorial.corp:8000/sap(bD1wdCZjPTQwNCZkPW1pbg==)/bc/bsp/sap/crm_ui_start/default.htm" target="_blank" class="link-btn">
+                                            <span>SAP PI</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="http://ealspdccrm02.equatorial.corp:8000/sap(bD1wdCZjPTQwMyZkPW1pbg==)/bc/bsp/sap/crm_ui_start/default.htm?sap-client=403&sap-language=PT" target="_blank" class="link-btn">
+                                            <span>SAP AL</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="https://ap-crm-prd.equatorial.corp:44301/sap/bc/bsp/sap/crm_ui_start?sap-client=405&sap-language=PT" target="_blank" class="link-btn">
+                                            <span>SAP AP</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="https://backoffice-pa.equatorialenergia.com.br/login/" target="_blank" class="link-btn">
+                                            <span>Backoffice PA</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="https://backoffice-ma.equatorialenergia.com.br/login/" target="_blank" class="link-btn">
+                                            <span>Backoffice MA</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="https://backoffice-pi.equatorialenergia.com.br/login/" target="_blank" class="link-btn">
+                                            <span>Backoffice PI</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="https://backoffice-al.equatorialenergia.com.br/login/" target="_blank" class="link-btn">
+                                            <span>Backoffice AL</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="https://backoffice-ap.equatorialenergia.com.br/login/" target="_blank" class="link-btn">
+                                            <span>Backoffice AP</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="https://agenciavirtual.equatorialenergia.com.br/Backoffice/Login" target="_blank" class="link-btn">
+                                            <span>Novo BackOffice</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="https://backoffice-go.equatorialenergia.com.br/login/" target="_blank" class="link-btn">
+                                            <span>Backoffice GO</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="https://webconsulta.equatorialenergia.com.br/sistemas-varejo/" target="_blank" class="link-btn">
+                                            <span>Web Consulta</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="http://10.1.1.191:8080/csicrm/Login.do?idModulo=2&tela=loginChamado&sessao=null&loginIni=true" target="_blank" class="link-btn">
+                                            <span>CRM PluSoft+</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="utilitarios" class="tab-content">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h2 class="card-header-title">
+                                    <span class="card-header-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                            <polyline points="15,3 21,3 21,9"/>
+                                            <line x1="10" y1="14" x2="21" y2="3"/>
+                                        </svg>
+                                    </span>
+                                    Utilitários
+                                </h2>
+                            </div>
+                            <div class="card-body">
+                                <a href="https://forms.office.com/pages/responsepage.aspx?id=UUVNECctOUiHsoYmSlIQpX82NRM_gzpPn3K3qkEoH3tUMkhYTkdCVU1US1RBMVk1TDFZMFpMRlA2Ti4u" target="_blank" class="link-btn">
+                                    <span>Acionamento Risco a Vida</span>
+                                    <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                                <a href="https://forms.office.com/pages/responsepage.aspx?id=UUVNECctOUiHsoYmSlIQpVXuB4486ltJswWu9s43rBRUNUVDNVFRNTdBSlc5SVZIR0pBNVRTUDJDRS4u&route=shorturl" target="_blank" class="link-btn">
+                                    <span>Cancelamento</span>
+                                    <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                                <a href="https://forms.office.com/pages/responsepage.aspx?id=UUVNECctOUiHsoYmSlIQpQIvg32y3c5Chsn_t_G-67VUQjlBVDY0SzBZSFNBTjc4MFFBS0JQSjlWMS4u&route=shorturl" target="_blank" class="link-btn">
+                                    <span>Classificador</span>
+                                    <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                                <a href="http://10.6.1.18/reports/browse/EQTL%20Servi%C3%A7os/4.%20Contact%20Center%20-%20EQTL%20SERVI%C3%87OS/1.%20Coordena%C3%A7%C3%A3o%20Call%20Center/01.%20BACKOFFICE/2025" target="_blank" class="link-btn">
+                                    <span>Backoffice Ilhas</span>
+                                    <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                                <a href="https://grupoequatorialenergia-my.sharepoint.com/:f:/r/personal/wagno_lima_equatorialservicos_com_br/Documents/GD%20car/Cartas%20GD?csf=1&web=1&e=eSaRRj" target="_blank" class="link-btn">
+                                    <span>Cartas GD NNE</span>
+                                    <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="gd-go" class="tab-content">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h2 class="card-header-title">
+                                    <span class="card-header-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                            <polyline points="15,3 21,3 21,9"/>
+                                            <line x1="10" y1="14" x2="21" y2="3"/>
+                                        </svg>
+                                    </span>
+                                    G. Distribuída GO
+                                </h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="links-grid">
+                                    <div>
+                                        <a href="http://sistemassatelites.equatorial.corp:8080/Sicap-adm/busca.xhtml" target="_blank" class="link-btn">
+                                            <span>SICAP</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="https://sgegoi.equatorialenergia.com.br/softexpert/login?page=1200231,73" target="_blank" class="link-btn">
+                                            <span>SGE</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="http://10.1.1.191:8080/csicrm/Login.do?idModulo=2&tela=loginChamado&sessao=null&loginIni=true" target="_blank" class="link-btn">
+                                            <span>PLUSOFT</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="http://10.201.48.101:11090/cbill/protected/home.do" target="_blank" class="link-btn">
+                                            <span>CBILL COMERCIAL GO</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="http://portal.bm4e.equatorialenergia.com.br/auth/realms/CPQD-Portal/protocol/openid-connect/auth?client_id=PGA-gui&redirect_uri=http%3A%2F%2Fportal.bm4e.equatorialenergia.com.br%2Fpga%2F&state=9521202c-2556-4c13-b91c-2e27ddc53531&response_mode=fragment&response_type=code&scope=openid&nonce=90059fcf-e7f2-4d8a-9fcd-56dd3b9563e5&code_challenge=ZgltqUWesWY7sAby1D1A2bHF3n_uh8XBF85Q142FSzY&code_challenge_method=S256" target="_blank" class="link-btn">
+                                            <span>Emergencial GO</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 - Criado pela Equipe de Planejamento e Tráfego</p>
+        </footer>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

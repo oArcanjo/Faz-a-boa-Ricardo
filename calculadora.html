@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Produtividade - Acesso Rápido</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="min-h-screen flex flex-col">
+        <header class="header">
+            <div class="header-left">
+                <a href="index.html" class="home-btn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9,22 9,12 15,12 15,22"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="header-right">
+                <div class="title-container">
+                    <svg class="laptop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16" />
+                    </svg>
+                    <span class="title">Acesso Rápido - Ilhas de Atendimento.</span>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="container">
+                <div class="page-header">
+                    <div class="page-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect width="16" height="20" x="4" y="2" rx="2" ry="2"/>
+                            <line x1="8" y1="6" x2="16" y2="6"/>
+                            <line x1="8" y1="10" x2="16" y2="10"/>
+                            <line x1="8" y1="14" x2="16" y2="14"/>
+                            <line x1="8" y1="18" x2="12" y2="18"/>
+                        </svg>
+                    </div>
+                    <h1 class="page-title">Calculadora de Produtividade</h1>
+                </div>
+
+                <div class="calculator-layout">
+                    <!-- Calculadora Principal -->
+                    <div class="calculator-main">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h2 class="card-header-title">
+                                    <span class="card-header-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect width="16" height="20" x="4" y="2" rx="2" ry="2"/>
+                                            <line x1="8" y1="6" x2="16" y2="6"/>
+                                            <line x1="8" y1="10" x2="16" y2="10"/>
+                                            <line x1="8" y1="14" x2="16" y2="14"/>
+                                            <line x1="8" y1="18" x2="12" y2="18"/>
+                                        </svg>
+                                    </span>
+                                    Calculadora de Produtividade
+                                </h2>
+                            </div>
+                            <div class="card-body">
+                                <!-- Aviso importante -->
+                                <div class="calculator-warning">
+                                    <svg class="warning-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+                                        <path d="M12 9v4"/>
+                                        <path d="m12 17 .01 0"/>
+                                    </svg>
+                                    <p><strong>Prezados, essa calculadora deve ser usada por atendentes que trabalham 06:20 por dia.</strong></p>
+                                </div>
+
+                                <!-- Formulário da calculadora -->
+                                <div class="calculator-form">
+                                    <div class="form-group">
+                                        <label for="note-type-input">Tipo de nota:</label>
+                                        <input type="text" id="note-type-input" placeholder="Ex: Reclamação, Solicitação, etc.">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="tmt-input">Informe o Tempo Médio de Tratamento:</label>
+                                        <input type="number" id="tmt-input" placeholder="Ex: 1" min="0" step="0.1">
+                                        <span class="input-suffix">minutos</span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="quantity-input">Informe a quantidade tratada:</label>
+                                        <input type="number" id="quantity-input" placeholder="Ex: 2" min="0" step="1">
+                                        <span class="input-suffix">notas</span>
+                                    </div>
+
+                                    <button class="calculate-btn" onclick="calculateProductivity()">
+                                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 11l3 3L22 4"/>
+                                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                                        </svg>
+                                        Calcular Produtividade
+                                    </button>
+
+                                    <!-- Resultado -->
+                                    <div id="result-container" class="result-container" style="display: none;">
+                                        <div class="result-card">
+                                            <h3 id="result-title">Último Cálculo</h3>
+                                            <div class="result-details">
+                                                <div class="result-item">
+                                                    <span class="result-label">Tipo de nota:</span>
+                                                    <span class="result-value" id="result-note-type">-</span>
+                                                </div>
+                                                <div class="result-item">
+                                                    <span class="result-label">Tempo Médio de Tratamento:</span>
+                                                    <span class="result-value" id="result-tmt">-</span>
+                                                </div>
+                                                <div class="result-item">
+                                                    <span class="result-label">Quantidade tratada:</span>
+                                                    <span class="result-value" id="result-quantity">-</span>
+                                                </div>
+                                                <div class="result-item">
+                                                    <span class="result-label">Tempo total gasto:</span>
+                                                    <span class="result-value" id="result-total-time">-</span>
+                                                </div>
+                                                <div class="result-item highlight">
+                                                    <span class="result-label">Produtividade:</span>
+                                                    <span class="result-value" id="result-productivity">-</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Explicação da fórmula -->
+                                    <div class="formula-explanation">
+                                        <h4>Como funciona o cálculo:</h4>
+                                        <p>• Cada minuto equivale a <strong>0,29 pontos</strong> de produtividade</p>
+                                        <p>• Fórmula: <strong>Tempo Médio de Tratamento × Quantidade × 0,29 = Produtividade</strong></p>
+                                        <p>• Meta: <strong>100% de produtividade</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Histórico e Consolidado -->
+                    <div class="calculator-sidebar">
+                        <!-- Consolidado -->
+                        <div class="content-card consolidado-card" id="consolidado-card">
+                            <div class="card-header">
+                                <h2 class="card-header-title consolidado-title" id="consolidado-title">
+                                    <span class="card-header-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect width="16" height="20" x="4" y="2" rx="2" ry="2"/>
+                                            <line x1="8" y1="6" x2="16" y2="6"/>
+                                            <line x1="8" y1="10" x2="16" y2="10"/>
+                                            <line x1="8" y1="14" x2="16" y2="14"/>
+                                            <line x1="8" y1="18" x2="12" y2="18"/>
+                                        </svg>
+                                    </span>
+                                    Consolidado Total
+                                </h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="consolidado-details">
+                                    <div class="consolidado-item">
+                                        <span class="consolidado-label">Total de notas:</span>
+                                        <span class="consolidado-value" id="total-items">0</span>
+                                    </div>
+                                    <div class="consolidado-item">
+                                        <span class="consolidado-label">Cálculos realizados:</span>
+                                        <span class="consolidado-value" id="total-calculations">0</span>
+                                    </div>
+                                    <div class="consolidado-item highlight" id="total-productivity-item">
+                                        <span class="consolidado-label">Produtividade Total:</span>
+                                        <span class="consolidado-value total" id="total-productivity">0.00%</span>
+                                    </div>
+                                    <div id="meta-message" class="meta-message" style="display: none;">
+                                        🎉 Meta atingida!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Histórico -->
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h2 class="card-header-title">
+                                    <span class="card-header-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M3 3v5h5"/>
+                                            <path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"/>
+                                            <path d="M12 7v5l4 2"/>
+                                        </svg>
+                                    </span>
+                                    Histórico de Cálculos
+                                </h2>
+                            </div>
+                            <div class="card-body">
+                                <div id="history-container" class="history-container">
+                                    <p class="history-empty">Nenhum cálculo realizado ainda</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 - Criado pela Equipe de Planejamento e Tráfego</p>
+        </footer>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        // Array para armazenar o histórico
+        let calculationHistory = [];
+
+        // Função específica para calcular produtividade
+        function calculateProductivity() {
+            const noteTypeInput = document.getElementById('note-type-input');
+            const tmtInput = document.getElementById('tmt-input');
+            const quantityInput = document.getElementById('quantity-input');
+            const resultContainer = document.getElementById('result-container');
+            
+            const noteType = noteTypeInput.value.trim();
+            const tmt = parseFloat(tmtInput.value);
+            const quantity = parseInt(quantityInput.value);
+            
+            // Validação dos inputs
+            if (!noteType) {
+                showToast('Erro', 'Por favor, informe o tipo de nota.', 'error');
+                return;
+            }
+            
+            if (isNaN(tmt) || isNaN(quantity) || tmt <= 0 || quantity <= 0) {
+                showToast('Erro', 'Por favor, informe valores válidos para Tempo Médio de Tratamento e quantidade.', 'error');
+                return;
+            }
+            
+            // Cálculo da produtividade (0,29 pontos por minuto)
+            const totalTime = tmt * quantity;
+            const productivity = totalTime * 0.29;
+            
+            // Criar objeto do cálculo
+            const calculation = {
+                id: Date.now().toString(),
+                noteType: noteType,
+                tmt: tmt,
+                quantity: quantity,
+                totalTime: totalTime,
+                productivity: productivity,
+                timestamp: new Date()
+            };
+            
+            // Adicionar ao histórico
+            calculationHistory.push(calculation);
+            
+            // Exibir resultado atual
+            document.getElementById('result-title').textContent = `Último Cálculo - ${noteType}`;
+            document.getElementById('result-note-type').textContent = noteType;
+            document.getElementById('result-tmt').textContent = `${tmt} min`;
+            document.getElementById('result-quantity').textContent = `${quantity} notas`;
+            document.getElementById('result-total-time').textContent = `${totalTime} min`;
+            document.getElementById('result-productivity').textContent = `${productivity.toFixed(2)}%`;
+            
+            // Mostrar container de resultado
+            resultContainer.style.display = 'block';
+            
+            // Atualizar histórico e consolidado
+            updateHistory();
+            updateConsolidado();
+            
+            // Limpar campos
+            noteTypeInput.value = '';
+            tmtInput.value = '';
+            quantityInput.value = '';
+            
+            // Toast de sucesso
+            showToast('Calculado!', `Produtividade: ${productivity.toFixed(2)}%`, 'success');
+            
+            // Verificar se chegou a 100%
+            const totalProductivity = calculationHistory.reduce((sum, item) => sum + item.productivity, 0);
+            if (totalProductivity >= 100) {
+                setTimeout(() => {
+                    showToast('🎉 Parabéns!', 'Você chegou a 100% de produtividade!', 'success');
+                }, 500);
+            }
+        }
+        
+        // Função para atualizar o histórico
+        function updateHistory() {
+            const historyContainer = document.getElementById('history-container');
+            
+            if (calculationHistory.length === 0) {
+                historyContainer.innerHTML = '<p class="history-empty">Nenhum cálculo realizado ainda</p>';
+                return;
+            }
+            
+            let historyHTML = '';
+            calculationHistory.forEach((item) => {
+                historyHTML += `
+                    <div class="history-item">
+                        <div class="history-item-content">
+                            <div class="history-item-header">
+                                <span class="history-item-number">${item.noteType}</span>
+                                <span class="history-item-time">${item.timestamp.toLocaleTimeString()}</span>
+                            </div>
+                            <div class="history-item-details">
+                                ${item.tmt}min × ${item.quantity} notas = <strong>${item.productivity.toFixed(2)}%</strong>
+                            </div>
+                        </div>
+                        <button class="history-item-delete" onclick="removeFromHistory('${item.id}')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 6h18"/>
+                                <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/>
+                                <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+                            </svg>
+                        </button>
+                    </div>
+                `;
+            });
+            
+            historyContainer.innerHTML = historyHTML;
+        }
+        
+        // Função para atualizar o consolidado
+        function updateConsolidado() {
+            const totalItems = calculationHistory.reduce((sum, item) => sum + item.quantity, 0);
+            const totalCalculations = calculationHistory.length;
+            const totalProductivity = calculationHistory.reduce((sum, item) => sum + item.productivity, 0);
+            
+            document.getElementById('total-items').textContent = totalItems;
+            document.getElementById('total-calculations').textContent = totalCalculations;
+            document.getElementById('total-productivity').textContent = `${totalProductivity.toFixed(2)}%`;
+            
+            // Atualizar estilo se chegou a 100%
+            const consolidadoCard = document.getElementById('consolidado-card');
+            const consolidadoTitle = document.getElementById('consolidado-title');
+            const totalProductivityItem = document.getElementById('total-productivity-item');
+            const metaMessage = document.getElementById('meta-message');
+            
+            if (totalProductivity >= 100) {
+                consolidadoCard.classList.add('success');
+                consolidadoTitle.innerHTML = `
+                    <span class="card-header-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </span>
+                    🏆 Consolidado Total
+                `;
+                totalProductivityItem.classList.add('success');
+                metaMessage.style.display = 'block';
+            } else {
+                consolidadoCard.classList.remove('success');
+                consolidadoTitle.innerHTML = `
+                    <span class="card-header-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect width="16" height="20" x="4" y="2" rx="2" ry="2"/>
+                            <line x1="8" y1="6" x2="16" y2="6"/>
+                            <line x1="8" y1="10" x2="16" y2="10"/>
+                            <line x1="8" y1="14" x2="16" y2="14"/>
+                            <line x1="8" y1="18" x2="12" y2="18"/>
+                        </svg>
+                    </span>
+                    Consolidado Total
+                `;
+                totalProductivityItem.classList.remove('success');
+                metaMessage.style.display = 'none';
+            }
+        }
+        
+        // Função para remover item do histórico
+        function removeFromHistory(id) {
+            calculationHistory = calculationHistory.filter(item => item.id !== id);
+            updateHistory();
+            updateConsolidado();
+            showToast('Removido!', 'Item removido do histórico.', 'success');
+        }
+        
+        // Permitir cálculo ao pressionar Enter nos inputs
+        document.getElementById('note-type-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                calculateProductivity();
+            }
+        });
+        
+        document.getElementById('tmt-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                calculateProductivity();
+            }
+        });
+        
+        document.getElementById('quantity-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                calculateProductivity();
+            }
+        });
+    </script>
+</body>
+</html>

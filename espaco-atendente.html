@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço do Atendente - Acesso Rápido</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="min-h-screen flex flex-col">
+        <header class="header">
+            <div class="header-left">
+                <a href="index.html" class="home-btn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9,22 9,12 15,12 15,22"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="header-right">
+                <div class="title-container">
+                    <svg class="laptop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16" />
+                    </svg>
+                    <span class="title">Acesso Rápido - Ilhas de Atendimento.</span>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="container">
+                <div class="page-header">
+                    <div class="page-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <h1 class="page-title">Espaço do Atendente</h1>
+                </div>
+
+                <div class="tabs">
+                    <div class="tabs-list">
+                        <button class="tab-trigger active" data-tab="acesso-rapido">Acesso Rápido</button>
+                        <button class="tab-trigger" data-tab="ferramentas">Ferramentas</button>
+                        <button class="tab-trigger" data-tab="calculadora">Calculadora</button>
+                    </div>
+
+                    <!-- ABA ACESSO RÁPIDO -->
+                    <div id="acesso-rapido" class="tab-content active">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h2 class="card-header-title">
+                                    <span class="card-header-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                            <polyline points="15,3 21,3 21,9"/>
+                                            <line x1="10" y1="14" x2="21" y2="3"/>
+                                        </svg>
+                                    </span>
+                                    Acesso Rápido
+                                </h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="links-grid">
+                                    <div>
+                                        <a href="https://apps.sae1.pure.cloud/" target="_blank" class="link-btn">
+                                            <span>Genesys</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="http://unifica.equatorialenergia.com.br:9203/sap(bD1wdCZjPTQwMiZkPW1pbg==)/bc/bsp/sap/crm_ui_start/default.htm?sap-client=402&sap-language=PT" target="_blank" class="link-btn">
+                                            <span>SAP PA</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="http://unifica.equatorialenergia.com.br:9204/sap(bD1wdCZjPTQwMSZkPW1pbg==)/bc/bsp/sap/crm_ui_start/default.htm?sap-client=401&sap-language=PT" target="_blank" class="link-btn">
+                                            <span>SAP MA</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="http://epispdccrm02.equatorial.corp:8000/sap(bD1wdCZjPTQwNCZkPW1pbg==)/bc/bsp/sap/crm_ui_start/default.htm" target="_blank" class="link-btn">
+                                            <span>SAP PI</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="http://ealspdccrm02.equatorial.corp:8000/sap(bD1wdCZjPTQwMyZkPW1pbg==)/bc/bsp/sap/crm_ui_start/default.htm?sap-client=403&sap-language=PT" target="_blank" class="link-btn">
+                                            <span>SAP AL</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="https://ap-crm-prd.equatorial.corp:44301/sap/bc/bsp/sap/crm_ui_start?sap-client=405&sap-language=PT" target="_blank" class="link-btn">
+                                            <span>SAP AP</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="https://backoffice-pa.equatorialenergia.com.br/login/" target="_blank" class="link-btn">
+                                            <span>Backoffice PA</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="https://backoffice-ma.equatorialenergia.com.br/login/" target="_blank" class="link-btn">
+                                            <span>Backoffice MA</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="https://backoffice-pi.equatorialenergia.com.br/login/" target="_blank" class="link-btn">
+                                            <span>Backoffice PI</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="https://backoffice-al.equatorialenergia.com.br/login/" target="_blank" class="link-btn">
+                                            <span>Backoffice AL</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="https://backoffice-ap.equatorialenergia.com.br/login/" target="_blank" class="link-btn">
+                                            <span>Backoffice AP</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="https://webconsulta.equatorialenergia.com.br/sistemas-varejo/" target="_blank" class="link-btn">
+                                            <span>Web Consulta</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                        <a href="http://10.1.1.191:8080/csicrm/Login.do?idModulo=2&tela=loginChamado&sessao=null&loginIni=true" target="_blank" class="link-btn">
+                                            <span>CRM PluSoft+</span>
+                                            <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                <polyline points="15,3 21,3 21,9"/>
+                                                <line x1="10" y1="14" x2="21" y2="3"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ABA FERRAMENTAS -->
+                    <div id="ferramentas" class="tab-content">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h2 class="card-header-title">
+                                    <span class="card-header-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                            <polyline points="15,3 21,3 21,9"/>
+                                            <line x1="10" y1="14" x2="21" y2="3"/>
+                                        </svg>
+                                    </span>
+                                    Ferramentas
+                                </h2>
+                            </div>
+                            <div class="card-body">
+                                <a href="http://portaldocolaborador.equatorial.corp/home" target="_blank" class="link-btn">
+                                    <span>Portal do Colaborador</span>
+                                    <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                                <a href="http://treinamento.equatorialenergia.com.br/login/index.php" target="_blank" class="link-btn">
+                                    <span>Portal de Treinamento</span>
+                                    <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                                <a href="http://10.6.1.160/" target="_blank" class="link-btn">
+                                    <span>Optimus M</span>
+                                    <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                                <a href="https://forms.office.com/pages/responsepage.aspx?id=UUVNECctOUiHsoYmSlIQpXVLerS6m75Io99nQig26PxUNjlURkFUSzBCTzRVMUtaQlhTUFNCWFpJOS4u&route=shorturl" target="_blank" class="link-btn">
+                                    <span>Meu Elogio</span>
+                                    <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                                <a href="https://sistemas-hm.equatorialenergia.com.br/telaagil/dashboard" target="_blank" class="link-btn">
+                                    <span>Tela Ágil</span>
+                                    <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                                <a href="https://equatorialenergia.learning.rocks/login" target="_blank" class="link-btn">
+                                    <span>U. Saber</span>
+                                    <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                                <a href="https://equatorialenergia.workplace.com/work/landing/input/" target="_blank" class="link-btn">
+                                    <span>Workplace</span>
+                                    <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                                <a href="https://equatorialenergia.edusense.app/#/" target="_blank" class="link-btn">
+                                    <span>Aprende+</span>
+                                    <svg class="link-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                                <div class="phone-btn" onclick="copyText('\\\\55ASPDCARQ01\\55ATENDE\\Operação', 'Mapear Pasta de Rede')">
+                                    <div class="phone-info">
+                                        <span class="phone-label">Mapear Pasta de Rede</span>
+                                    </div>
+                                    <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                                        <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ABA CALCULADORA -->
+                    <div id="calculadora" class="tab-content">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h2 class="card-header-title">
+                                    <span class="card-header-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect width="16" height="20" x="4" y="2" rx="2" ry="2"/>
+                                            <line x1="8" y1="6" x2="16" y2="6"/>
+                                            <line x1="8" y1="10" x2="16" y2="10"/>
+                                            <line x1="8" y1="14" x2="16" y2="14"/>
+                                            <line x1="8" y1="18" x2="12" y2="18"/>
+                                        </svg>
+                                    </span>
+                                    Calculadora de Produtividade
+                                </h2>
+                            </div>
+                            <div class="card-body">
+                                <!-- Aviso importante -->
+                                <div class="calculator-warning">
+                                    <svg class="warning-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+                                        <path d="M12 9v4"/>
+                                        <path d="m12 17 .01 0"/>
+                                    </svg>
+                                    <p><strong>Prezados, essa calculadora deve ser usada por atendentes que trabalham 06:20 por dia.</strong></p>
+                                </div>
+
+                                <!-- Formulário da calculadora -->
+                                <div class="calculator-form">
+                                    <div class="form-group">
+                                        <label for="note-type-input">Tipo de nota:</label>
+                                        <input type="text" id="note-type-input" placeholder="Ex: Reclamação, Solicitação, etc.">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="tmt-input">Informe o Tempo Médio de Tratamento:</label>
+                                        <input type="number" id="tmt-input" placeholder="Ex: 1" min="0" step="0.1">
+                                        <span class="input-suffix">minutos</span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="quantity-input">Informe a quantidade tratada:</label>
+                                        <input type="number" id="quantity-input" placeholder="Ex: 2" min="0" step="1">
+                                        <span class="input-suffix">notas</span>
+                                    </div>
+
+                                    <button class="calculate-btn" onclick="calculateProductivity()">
+                                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 11l3 3L22 4"/>
+                                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                                        </svg>
+                                        Calcular Produtividade
+                                    </button>
+
+                                    <!-- Resultado -->
+                                    <div id="result-container" class="result-container" style="display: none;">
+                                        <div class="result-card">
+                                            <h3 id="result-title">Último Cálculo</h3>
+                                            <div class="result-details">
+                                                <div class="result-item">
+                                                    <span class="result-label">Tipo de nota:</span>
+                                                    <span class="result-value" id="result-note-type">-</span>
+                                                </div>
+                                                <div class="result-item">
+                                                    <span class="result-label">Tempo Médio de Tratamento:</span>
+                                                    <span class="result-value" id="result-tmt">-</span>
+                                                </div>
+                                                <div class="result-item">
+                                                    <span class="result-label">Quantidade tratada:</span>
+                                                    <span class="result-value" id="result-quantity">-</span>
+                                                </div>
+                                                <div class="result-item">
+                                                    <span class="result-label">Tempo total gasto:</span>
+                                                    <span class="result-value" id="result-total-time">-</span>
+                                                </div>
+                                                <div class="result-item highlight">
+                                                    <span class="result-label">Produtividade:</span>
+                                                    <span class="result-value" id="result-productivity">-</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Explicação da fórmula -->
+                                    <div class="formula-explanation">
+                                        <h4>Como funciona o cálculo:</h4>
+                                        <p>• Cada minuto equivale a <strong>0,29 pontos</strong> de produtividade</p>
+                                        <p>• Fórmula: <strong>Tempo Médio de Tratamento × Quantidade × 0,29 = Produtividade</strong></p>
+                                        <p>• Meta: <strong>100% de produtividade</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 - Criado pela Equipe de Planejamento e Tráfego</p>
+        </footer>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        // Função específica para calcular produtividade
+        function calculateProductivity() {
+            const noteTypeInput = document.getElementById('note-type-input');
+            const tmtInput = document.getElementById('tmt-input');
+            const quantityInput = document.getElementById('quantity-input');
+            const resultContainer = document.getElementById('result-container');
+            
+            const noteType = noteTypeInput.value.trim();
+            const tmt = parseFloat(tmtInput.value);
+            const quantity = parseInt(quantityInput.value);
+            
+            // Validação dos inputs
+            if (!noteType) {
+                showToast('Erro', 'Por favor, informe o tipo de nota.', 'error');
+                return;
+            }
+            
+            if (isNaN(tmt) || isNaN(quantity) || tmt <= 0 || quantity <= 0) {
+                showToast('Erro', 'Por favor, informe valores válidos para Tempo Médio de Tratamento e quantidade.', 'error');
+                return;
+            }
+            
+            // Cálculo da produtividade (0,29 pontos por minuto)
+            const totalTime = tmt * quantity;
+            const productivity = totalTime * 0.29;
+            
+            // Exibir resultados
+            document.getElementById('result-title').textContent = `Último Cálculo - ${noteType}`;
+            document.getElementById('result-note-type').textContent = noteType;
+            document.getElementById('result-tmt').textContent = `${tmt} min`;
+            document.getElementById('result-quantity').textContent = `${quantity} notas`;
+            document.getElementById('result-total-time').textContent = `${totalTime} min`;
+            document.getElementById('result-productivity').textContent = `${productivity.toFixed(2)}%`;
+            
+            // Mostrar container de resultado
+            resultContainer.style.display = 'block';
+            resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            
+            // Limpar campos
+            noteTypeInput.value = '';
+            tmtInput.value = '';
+            quantityInput.value = '';
+            
+            // Toast de sucesso
+            showToast('Calculado!', `Produtividade: ${productivity.toFixed(2)}%`, 'success');
+        }
+
+// Permitir cálculo ao pressionar Enter nos inputs
+document.getElementById('note-type-input').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        calculateProductivity();
+    }
+});
+        
+        document.getElementById('tmt-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                calculateProductivity();
+            }
+        });
+        
+        document.getElementById('quantity-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                calculateProductivity();
+            }
+        });
+    </script>
+</body>
+</html>
