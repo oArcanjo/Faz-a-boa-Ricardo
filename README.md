@@ -149,6 +149,4 @@ Para suporte ou dúvidas sobre o sistema, entre em contato com a equipe de desen
 ---
 
 **© 2025 - Criado pela Equipe de Planejamento e Tráfego**
-\`\`\`
-
-Agora vou criar um arquivo .gitignore:
+\`\`
